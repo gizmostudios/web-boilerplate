@@ -1,0 +1,17 @@
+// 3rd party libs
+@import 'vendor/all';
+
+body {
+    background: #ffa;
+    display: flex;
+    min-height: 100vh;
+}
+
+hr {
+    height: 1px;
+    background-color: black;
+}
+
+.is-vertically-centered {
+    align-self: center;
+}

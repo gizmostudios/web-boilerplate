@@ -1,0 +1,15 @@
+doctype html
+head
+    title=name
+    link(rel="stylesheet" href=`assets/css/bundle.css?version=${Date.now()}`)
+    
+body
+    .container.is-vertically-centered
+        h1.title Welcome!
+        p You are awesome
+
+        hr
+
+        p#output
+
+    script(src=`assets/js/bundle.js?version=${Date.now()}`)

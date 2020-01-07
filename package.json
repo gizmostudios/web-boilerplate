@@ -6,11 +6,21 @@
   "repository": "git@github.com:gizmostudios/web-boilerplate.git",
   "author": "GizmoStudios",
   "license": "MIT",
+  "scripts": {
+    "css": "node-sass src/assets/scss/bundle.scss -w --source-map true public/assets/css/bundle.css",
+    "js": "rollup -w -c",
+    "html": "pug src/pug/ -w -O src/config.json -o public/",
+    "livereload": "livereload public",
+    "serve": "http-server public -s --cors",
+    "start": "yarn run css | yarn run js | yarn run html | yarn run serve | yarn run livereload"
+  },
   "dependencies": {
-    "concurrently": "^5.0.2",
-    "live-reload": "^1.1.0",
+    "@rollup/plugin-json": "^4.0.1",
+    "bulma": "^0.8.0",
+    "http-server": "^0.12.0",
+    "livereload": "^0.8.2",
     "node-sass": "^4.13.0",
-    "pug": "^2.0.4",
+    "pug-cli": "^1.0.0-alpha6",
     "rollup": "^1.28.0"
   }
 }
