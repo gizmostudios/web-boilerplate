@@ -1,0 +1,35 @@
+extends layouts/default
+
+block title
+	title=title_main
+
+block content
+	section.main
+		.container
+			.columns.mt-1
+				.column
+					.box
+						article.has-text-centered
+							h1.title Kies een tijd
+							p.has-text-justified.is-strong
+							| Indien mogelijk verhelpen wij het probleem direct.
+							| Op deze manier weet u zeker dat wij alle tijd voor u hebben.
+
+							hr
+
+							a.button.is-primary(href='/') Terug
+
+				.column.is-two-thirds
+					table#datePlanner.table.is-striped.is-hoverable.is-fullwidth
+						tr
+							th
+								span dag
+							th(colspan=9).has-text-centered
+								span tijdstip
+						each day in ['ma','di','wo','do','vr','za']
+							tr
+								th.is-secondary
+									span=day.toUpperCase()
+								each hour in ['09','10','11','12','13','14','15','16','17']
+									td.has-text-centered
+										a=hour

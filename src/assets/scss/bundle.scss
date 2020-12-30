@@ -1,17 +1,16 @@
 // 3rd party libs
 @import 'vendor/all';
 
-body {
-    background: #ffa;
-    display: flex;
-    min-height: 100vh;
-}
+@import 'utils/variables';
+@import 'utils/spacers';
 
-hr {
-    height: 1px;
-    background-color: black;
-}
-
-.is-vertically-centered {
-    align-self: center;
-}
+@import 'components/base';
+@import 'components/box';
+@import 'components/button';
+@import 'components/footer';
+@import 'components/list';
+@import 'components/logo';
+@import 'components/hero';
+@import 'components/table';
+@import 'components/typography';
+@import 'components/nav';

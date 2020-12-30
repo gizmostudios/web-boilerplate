@@ -1,0 +1,21 @@
+doctype html
+head
+	link(rel='stylesheet' href=`assets/css/bundle.css?version=${Date.now()}`)
+	meta(name='viewport' content='width=device-width, initial-scale=1.0')
+	meta(name='robots' content='index, follow')
+	meta(name='googlebot' content='index, follow')
+	include ../includes/favicons.pug
+	block title
+
+body
+	block header
+		include ../includes/nav.pug
+
+	block content
+
+	block footer
+		include ../includes/footer.pug
+
+	block scripts
+		script(type='text/javascript' src='/socket.io/socket.io.js')
+		script(src=`assets/js/bundle.js?version=${Date.now()}`)

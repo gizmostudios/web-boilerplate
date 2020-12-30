@@ -1,0 +1,19 @@
+.button {
+    border-radius: 0;
+    font-size: 1.2rem;
+    box-shadow: 0 5px 0 rgba($color-shadow, .2);
+
+    &:hover, &:active {
+        background: $color-primary;
+        color: $color-text-contrast;
+    }
+
+    &.is-primary {
+        background: $color-primary;
+        color: $color-text-contrast;
+
+        &:hover, &:active {
+            background: darken($color-primary, 10);
+        }
+    }
+}

@@ -1,0 +1,13 @@
+.list {
+
+  > li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: $spacing/4 $spacing/2;
+
+    &:nth-child(even){
+      background: rgba(black, .1);
+    }
+  }
+}

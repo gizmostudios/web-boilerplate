@@ -11,16 +11,18 @@
     "js": "rollup -w -c",
     "html": "pug src/pug/ -w -O src/config.json -o public/",
     "livereload": "livereload public",
-    "serve": "http-server public -s --cors",
-    "start": "yarn run css | yarn run js | yarn run html | yarn run serve | yarn run livereload"
+    "start": "yarn run css | yarn run js | yarn run html | yarn run livereload | node server"
   },
   "dependencies": {
     "@rollup/plugin-json": "^4.0.1",
     "bulma": "^0.8.0",
+    "express": "^4.17.1",
+    "http": "^0.0.1-security",
     "http-server": "^0.12.0",
     "livereload": "^0.8.2",
     "node-sass": "^4.13.0",
     "pug-cli": "^1.0.0-alpha6",
-    "rollup": "^1.28.0"
+    "rollup": "^1.28.0",
+    "socket.io": "^2.3.0"
   }
 }

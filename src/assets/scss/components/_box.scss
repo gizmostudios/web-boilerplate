@@ -1,0 +1,48 @@
+.box {
+    background: rgba($color-background, 1);
+    position: relative;
+    overflow: hidden;
+    border: none;
+    border-radius: $border-radius;
+    box-shadow: $shadow-default;
+    
+    &:after {
+        content: '';
+        background: $color-primary;
+        height: 10px;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+
+    .button {
+        margin-bottom: $spacing;
+    }
+
+    &.bounceInRight {
+        animation: bounceInRight .3s ease-in-out forwards;
+        transform-origin: left;
+        transform: scale(0, 1);
+        animation-delay: .5s;
+
+        &[data-delay="1"] {
+            animation-delay: .75s;
+        }
+        &[data-delay="2"] {
+            animation-delay: 1s;
+        }
+    }
+}
+
+@keyframes bounceInRight {
+    0% {
+        transform: scale(0, 1);
+    }
+    50% {
+        transform: scale(1.1, 1);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+}

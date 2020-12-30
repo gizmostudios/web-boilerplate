@@ -1,15 +1,63 @@
-doctype html
-head
-    title=name
-    link(rel="stylesheet" href=`assets/css/bundle.css?version=${Date.now()}`)
-    
-body
-    .container.is-vertically-centered
-        h1.title Welcome!
-        p You are awesome
+extends layouts/default
 
-        hr
+block title
+  title=title_main
 
-        p#output
+block content
+  section.main
+    .container
+      
+      .columns.mt-1
+        .column.is-one-third
+          .box.bounceInRight
+            article.has-text-centered
+              h1.title "We blijven open"
+              p.has-text-left
+                | Wij mogen open blijven, echter alleen voor reparaties. Dat betekent dat de winkel gesloten is, met uitzondering van afgeven en ophalen.
+              .spacer
+              p.has-text-left
+                | Om u zo goed mogelijk van dienst te kunnen zijn vragen wij contact met ons op te nemen voor een afspraak. Hartelijk dank en tot snel!
+              .spacer
+              a.button.is-primary.is-fullwidth(href='mailto:info@computerdokter.nl') Mail ons
+              a.button.is-secondary.is-fullwidth(href='tel:+31206922525') Bel ons
 
-    script(src=`assets/js/bundle.js?version=${Date.now()}`)
+        - index = 0
+        each product in products
+          - index++
+
+          .column.is-one-third
+            .box.product.bounceInRight(data-delay=index)
+              article.article
+                figure.image
+                  img(src=`${paths.images}/${product.image}`)
+                  
+                  .spacer 
+
+                  figcaption.figcaption.has-text-centered
+                    if product.title
+                      h4.title.is-4=product.title
+                    else
+                      h4.title.is-4 Aanbieding
+
+                    if product.subtitle
+                      h5.subtitle.is-5=product.subtitle
+                .spacer
+
+                ul.list
+                  each value, label in product.specs
+                    li
+                      .list-label=label
+                      .list-value
+                        if typeof value == "string"
+                          span=value
+                        else
+                          select.select
+                            each entry in value
+                              option(value=entry.adds)=entry.label
+                  li 
+                    .list-label.is-strong Prijs
+                    .list-value
+                      span.is-highlighted &euro; 
+                      span.is-highlighted.price(data-original=product.prijs)=product.prijs
+
+                a.button.is-primary.order.is-fullwidth(href=`mailto:${email}?subject=${product.specs.type} (${product.specs.opslag[0].label || product.specs.opslag})&body=${emailProductTemplate}`) Reserveer nu

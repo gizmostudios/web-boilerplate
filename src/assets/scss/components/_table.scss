@@ -1,0 +1,17 @@
+.table {
+	border-radius: $border-radius;
+	box-shadow: $shadow-default;
+	overflow: hidden;
+
+	th {
+		background: $color-primary;
+		color: $color-text-contrast;
+		border-color: $color-primary;
+		vertical-align: middle;
+	}
+
+	th.is-secondary {
+		background: $color-background-contrast;
+		border-color: darken($color-background-contrast, 15);
+	}
+}

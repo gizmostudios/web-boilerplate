@@ -1,0 +1,31 @@
+body {
+    background: url('/assets/images/cd-photo-counter-1600.jpg') center no-repeat;
+    background-size: cover;
+    background-color: #111;
+    color: $color-text;
+    min-height: 100vh;
+}
+
+@include mobile() {
+    body {
+        background-image: url('/assets/images/cd-photo-counter-1600.jpg');
+        background-position: 65%;
+        background-size: cover;
+    }
+
+    .container {
+        margin: 0 $spacing;
+    }
+}
+
+@include tablet() {
+    .container {
+        margin: 0 $spacing;
+    }
+}
+
+@include desktop() {
+    .container {
+        margin: 0 auto;
+    }
+}

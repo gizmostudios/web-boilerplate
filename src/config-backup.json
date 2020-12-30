@@ -7,13 +7,11 @@
         "images": "/assets/images"
     },
     "products": [{
-        "title": "Te koop",
-        "subtitle": "Gebruikt incl. garantie",
-        "image": "hp-sleekbook.png",
+        "image": "cd-lenovo-t450s.jpg",
         "specs": {
-            "type": "HP Sleekbook",
-            "processor": "Core i3 4th gen",
-            "scherm": "14\" IPS 1366x768",
+            "type": "Lenovo Thinkpad T450s",
+            "processor": "Core i7-4600U @2.6Ghz",
+            "scherm": "14\" IPS 1600x900",
             "opslag": [{
                 "label":"250GB SSD",
                 "adds": 0
@@ -21,10 +19,22 @@
                 "label": "500GB SSD",
                 "adds": 50
             }],
-            "intern geheugen": "8GB",
+            "intern geheugen": "12GB",
             "os": "Windows 10 Pro",
             "garantie": "1 jaar"
         },
-        "prijs": 350
+        "prijs": 450
+    }, {
+        "image": "cd-lenovo-t560.jpg",
+        "specs": {
+            "type": "Lenovo Thinkpad T560",
+            "processor": "Core i7-6600U @2.8Ghz",
+            "scherm": "15\" IPS 1920x1080",
+            "opslag": "1000GB SSD",
+            "intern geheugen": "16GB",
+            "os": "Windows 10 Pro",
+            "garantie": "1 jaar"
+        },
+        "prijs": 750
     }]
 }

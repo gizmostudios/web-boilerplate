@@ -1,0 +1,32 @@
+.main {
+    min-height: calc(100vh - 80px);
+}
+.main .container {
+    padding-bottom: 270px;
+}
+.footer {
+    padding: $spacing;
+    padding-top: $spacing*2;
+    position: relative;
+
+    min-height: 250px;
+    margin-top: -250px;
+    background: url('../images/cd-pattern-carpet.jpg') $color-background-contrast;
+    background-size: 50%;
+    background-position: 25%;
+    border-top: solid 3px $color-primary;
+
+    .title {
+        color: $color-primary;
+        margin: 0;
+        text-shadow: 0 1px 0 black;
+    }
+
+    a, span {
+        color: rgba($color-text-contrast, .8);
+    }
+
+    ul.nav > li {
+        margin: $spacing/2 0;
+    }
+}

@@ -1,0 +1,54 @@
+
+nav.navbar(role='navigation' aria-label='main navigation')
+	.navbar-brand
+		a.cd-logo.navbar-item(href='/')
+			img(src='assets/images/cd-logo.svg' width='48' height='48')
+			.title
+				span COMPUTER
+				span DOKTER
+				.sub onderdelen & reparatie
+
+		label.navbar-burger.burger(for='mainMenu' role='button' aria-label='menu' aria-expanded='false')
+			span(aria-hidden='true')
+			span(aria-hidden='true')
+			span(aria-hidden='true')
+
+	input.nav-toggle.is-hidden#mainMenu(type='checkbox')
+	.navbar-menu
+		.navbar-end
+			//- a.navbar-item(href="/afspraak.html") Maak afspraak
+			a.navbar-item(href="mailto:info@computerdokter.nl?subject=Reparatie%20aanvraag&body=Beste%20klant%2C%0A%0AWij%20ontvangen%20graag%20van%20u%20de%20volgende%20gegevens.%0AZodra%20wij%20uw%20email%20in%20ontvangst%20hebben%20genomen%20nemen%20wij%20contact%20met%20u%20op%20voor%20een%20prijs-%20en%20tijdsindicatie.%0A%0A-%20Naam%0A-%20Telefoonnummer%0A-%20Merk%20%26%20type%20computer%0A-%20Besturingssysteem%0A-%20Beschrijving%20van%20probleem%0A%0AMet%20vriendelijke%20groet%2C%0A%0ADe%20Computer%20Dokter%0A020%20692%202525%0Ainfo%40computerdokter.nl%0ALinnaeusstraat%2060hs%0A1093EH%20Amsterdam")
+				| Reparatie aanvragen
+			.navbar-item
+				input.nav-toggle.is-hidden#timeMenu(type='checkbox')
+				label.navbar-link(for='timeMenu') Openingstijden
+				.navbar-menu.navbar-dropdown
+					a.navbar-item
+						strong MA
+						span 10:00 - 17:00
+					a.navbar-item
+						strong DI
+						span 10:00 - 18:00
+					a.navbar-item
+						strong WO
+						span 10:00 - 18:00
+					a.navbar-item
+						strong DO
+						span 10:00 - 18:00
+					a.navbar-item
+						strong VR
+						span 10:00 - 18:00
+					a.navbar-item
+						strong ZA
+						span 10:00 - 17:00
+					a.navbar-item
+						strong ZO
+						span Gesloten
+
+
+
+		//- .navbar-end
+			.navbar-item
+				.buttons
+					a.button.is-primary.is-fullwidth
+						| Contact

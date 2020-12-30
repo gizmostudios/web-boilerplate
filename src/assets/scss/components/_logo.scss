@@ -1,0 +1,21 @@
+.cd-logo {
+    
+    .title {
+        font-size: 1.6rem;
+        font-weight: bold;
+        
+        span:first-child {
+            color: $color-primary;
+        }
+
+        span:nth-child(2) {
+            color: $color-secondary;
+        }
+
+        .sub {
+            color: $color-secondary;
+            font-weight: initial;
+            font-size: .9rem; 
+        }
+    }
+}

@@ -1,0 +1,37 @@
+hr {
+    background: rgba($color-shadow, .5);
+    height: 1px;
+    border: none;
+}
+
+.title {
+    color: $color-primary;
+    font-weight: bold;
+}
+.subtitle {
+    color: $color-secondary;
+    font-size: 1.1rem;
+}
+
+a {
+    color: $color-primary;
+}
+
+.is-strong {
+    font-weight: bold;
+}
+
+.is-weak {
+    color: rgba($color-text, .3);
+}
+
+.is-highlighted {
+    color: $color-primary;
+    font-weight: bold;
+}
+
+@include mobile() {
+    h1.title {
+        font-size: 1.6rem;
+    }
+}
