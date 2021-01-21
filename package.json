@@ -23,6 +23,6 @@
     "node-sass": "^4.13.0",
     "pug-cli": "^1.0.0-alpha6",
     "rollup": "^1.28.0",
-    "socket.io": "^2.3.0"
+    "socket.io": "^2.4.0"
   }
 }
